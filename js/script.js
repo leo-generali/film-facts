@@ -32,10 +32,21 @@ view = {
     //Movie title
     document.getElementById('title').innerHTML = obj.Title;
 
-    //Runtime
+    //Year
+    var filmYear = obj.Year;
+    document.getElementById('year').innerHTML = filmYear;
 
+    //Runtime
     var filmRuntime = obj.Runtime.substr(0, obj.Runtime.length - 4);
     document.getElementById('runtime').innerHTML = filmRuntime;
+
+    //Metacritic score
+    var filmMMScore = obj.Metascore + '%';
+    document.getElementById('metacritic').innerHTML = filmMMScore;   
+
+    //Metacritic score
+    var filmDirector = obj.Director;
+    document.getElementById('director').innerHTML = filmDirector;    
   },
 
   failedSearch: function(obj){

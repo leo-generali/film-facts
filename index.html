@@ -13,7 +13,10 @@
 </head>
 <body>
     <header class="container">
-      <h1 class="name"></h1>
+      <div class="row">
+        <img id="logo" src="img/film.svg">
+        <h1 class="name">Film Facts</h1>
+      </div>
       <form onsubmit="return model.searchMovie()">
           <input id="searchbar" type="text" name="movie">
           <input id="searchbar-go" type="submit" value="Search">
@@ -21,25 +24,28 @@
       <div class="linebreak"></div>
     </header>
     <main class="container">
-        <p id="title"></p>
-        <div class="bubble-container">
-          <div class="bubble">
-            <p class="bubble-info">runtime</p>
-            <h4 id="runtime" class="data"></h4>
+        <h6 id="title"></h6>
+        <section class="bubble-container">
+          <div class="bubble bubble__green">
+            <h5 id="year" class="data"></h5>
+            <p class="bubble-info bubble-info__green">year</p>
           </div>
-          <div class="bubble">
-            <p class="bubble-info">runtime</p>
+          <div class="bubble bubble__blue">
+            <h5 id="runtime" class="data"></h5>
+            <p class="bubble-info bubble-info__blue">runtime</p>
           </div>
-          <div class="bubble">
-            <p class="bubble-info">runtime</p>
+          <div class="bubble bubble__orange">
+            <h5 id="metacritic" class="data"></h5>
+            <p class="bubble-info bubble-info__orange">metacritic</p>
           </div>
-          <div class="bubble">
-            <p class="bubble-info">runtime</p>
+          <div class="bubble bubble__purple">
+            <h6 id="director" class="data"></h6>
+            <p class="bubble-info bubble-info__purple">director</p>
           </div>
-        </div>
+        </section>
     </main>
 
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
     <script src="js/script.js"></script>
 </body>
 </html>

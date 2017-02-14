@@ -15,8 +15,7 @@ body{
 }
 
 p, h1, h2, h3, h4, h5, h6{
-    font-family: 'Catamaran', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Quicksand', sans-serif;
     color: #f1f1f1;
 }
 
@@ -51,14 +50,22 @@ h5{
 Header
 
 */
+.row{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+
+  margin-bottom: 20px
+}
 
 #logo{
-  width: 40%;
-
+  transform: rotate(5deg);
+  height: 180px;
 }
 
 .name{
-
+  text-align: left;
+  width: 30%;
 }
 
 #searchbar{
@@ -124,7 +131,9 @@ Header
 */
 
 #title{
-  text-align: left;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: initial;
 }
 
 .bubble-container{
@@ -134,8 +143,9 @@ Header
 }
 
 .bubble{
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 100px;
   height: 100px;
@@ -143,20 +153,49 @@ Header
 
   border-radius: 100%;
 
-  border: solid 5px rgba(0,0,0,1);
+  /*border: solid 5px rgba(0,0,0,1);*/
 
   background-color: rgba(0,0,0,0);
 }
 
 .bubble-info{
-  position: relative;
-  top: -8px;
-
-  background-color: black;
+  /*background-color: rgb(0,0,0);*/
   padding: 5px 15px;
   border-radius: 20px;
 
   text-align: center;
+}
+
+.bubble__green{
+  border: solid 5px #27ae60;
+}
+
+.bubble-info__green{
+  background-color: #27ae60;
+}
+
+.bubble__blue{
+  border: solid 5px #2980b9;
+}
+
+.bubble-info__blue{
+  background-color: #2980b9;
+}
+
+.bubble__orange{
+  border: solid 5px #f39c12;
+}
+
+.bubble-info__orange{
+  background-color: #f39c12;
+}
+
+.bubble__purple{
+  border: solid 5px #8e44ad;
+}
+
+.bubble-info__purple{
+  background-color: #8e44ad;
 }
 
 .data{
