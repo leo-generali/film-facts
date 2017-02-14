@@ -35,7 +35,7 @@ view = {
     //Runtime
 
     var filmRuntime = obj.Runtime.substr(0, obj.Runtime.length - 4);
-    document.getElementById('runtime-info').innerHTML = filmRuntime;
+    document.getElementById('runtime').innerHTML = filmRuntime;
   },
 
   failedSearch: function(obj){
