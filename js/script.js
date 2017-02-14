@@ -12,7 +12,7 @@ model = {
         var filmInfo = JSON.parse(this.responseText);
         view.updateFilmObj(filmInfo);
       }else{
-        console.log('bad');
+        view.failedSearch();
       }
     };
     httpRequest.open('GET', url, true);
@@ -25,11 +25,21 @@ model = {
 
 view = {
   init: function(){
-    document.getElementById('searchbar-go').addEventListener('click', model.seachMovie);
+    
   },
 
   updateFilmObj: function(obj){
+    //Movie title
     document.getElementById('title').innerHTML = obj.Title;
+
+    //Runtime
+
+    var filmRuntime = obj.Runtime.substr(0, obj.Runtime.length - 4);
+    document.getElementById('runtime-info').innerHTML = filmRuntime;
+  },
+
+  failedSearch: function(obj){
+    document.getElementById('title').innerHTML = "Couldn't reach server. Please try again.";
   }
 };
 
