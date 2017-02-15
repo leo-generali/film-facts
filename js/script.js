@@ -9,10 +9,15 @@ model = {
     httpRequest.onreadystatechange = function(){
       if(this.readyState === 4){
         console.log('good');
+        view.loaderFlip('none');
         var filmInfo = JSON.parse(this.responseText);
         view.updateFilmObj(filmInfo);
       }else{
-        view.failedSearch();
+        view.loaderFlip('inline');
+        if(this.status !== 200){
+          view.loaderFlip('none');
+          view.failedSearch();
+        }
       }
     };
     httpRequest.open('GET', url, true);
@@ -47,6 +52,10 @@ view = {
     //Metacritic score
     var filmDirector = obj.Director;
     document.getElementById('director').innerHTML = filmDirector;    
+  },
+
+  loaderFlip: function(loaderswitch){
+    document.getElementById('loading').style.display = loaderswitch;    
   },
 
   failedSearch: function(obj){

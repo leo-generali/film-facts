@@ -83,13 +83,12 @@ Header
   position:relative;
   left:-4px;
 
-  color: #98ff98;
+  color: white;
   font-family: 'Catamaran', sans-serif;
   font-size: 1em;
   padding: 6px 15px 6px 15px;
   border: 0;
 
-  text-shadow: 0px 0px 2px;
 
   border-top: solid 2px rgba(0,0,0,0.7);
   border-right: solid 2px rgba(0,0,0,0.7);
@@ -103,6 +102,7 @@ Header
 
   cursor: pointer;
 
+  text-shadow: 0px 0px 1px;
   background: rgba(0,0,0,0.5); 
 }
 
@@ -117,6 +117,11 @@ Header
   background: #AA076B; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, yellow , #61045F); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, yellow , #61045F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
+}
+
+#loading{
+  height: 50px;
+  display: none;
 }
 
 /*
