@@ -48,22 +48,19 @@ h5{
 Header
 
 */
-.row{
-  display: flex;
-  align-items: center; 
-  justify-content: center;
+.top{
+  display: inline-block;
 
   margin-bottom: 20px
 }
 
 #logo{
   transform: rotate(5deg);
-  height: 180px;
+  height: 100px;
 }
 
 .name{
-  text-align: left;
-  width: 30%;
+  font-size: 3em;
 }
 
 #searchbar{
