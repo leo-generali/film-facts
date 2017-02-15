@@ -29,11 +29,13 @@ model = {
 };
 
 view = {
-  init: function(){
-    
+  turnOnFacts: function(){
+    document.getElementById('belowheader').style.display = 'block';
   },
 
   updateFilmObj: function(obj){
+    this.turnOnFacts();
+
     //Movie title
     document.getElementById('title').innerHTML = obj.Title;
 
@@ -64,7 +66,3 @@ view = {
 };
 
 controller = {};
-
-
-
-view.init();

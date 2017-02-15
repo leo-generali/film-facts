@@ -130,13 +130,17 @@ Header
 
 */
 
+#belowheader{
+  display: none;
+}
+
 #title{
   text-align: center;
   font-size: 2em;
   letter-spacing: initial;
 }
 
-.bubble-container{
+#bubble-container{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
