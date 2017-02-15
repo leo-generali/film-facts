@@ -37,6 +37,11 @@ h5{
   font-size: 2em;
 }
 
+section{
+  margin-bottom: 20px;
+  text-align: left;
+}
+
 .container{
   max-width: 800px;
   margin: 0 auto;
@@ -131,7 +136,7 @@ Header
 */
 
 #belowheader{
-  display: none;
+/*  display: none;*/
 }
 
 #title{
@@ -209,5 +214,35 @@ Header
   text-align: center;
   right: 0px;
   left: 0px;
+}
 
+/*
+
+  Summary Section
+
+*/
+
+#summary{
+  background-color: rgb(13, 19, 30);
+  padding: 10px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.summary-info-top{
+  display: inline;
+
+  font-weight: bold;
+  letter-spacing: 2.5px;
+
+  margin-top: 5px;
+
+}
+
+.summary-info{
+  display: inline;
 }

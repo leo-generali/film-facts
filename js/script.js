@@ -53,7 +53,21 @@ view = {
 
     //Metacritic score
     var filmDirector = obj.Director;
-    document.getElementById('director').innerHTML = filmDirector;    
+    document.getElementById('director').innerHTML = filmDirector;
+
+    //Summary
+    var filmSummary = obj.Plot;
+    document.getElementById('summary-summary').innerHTML = filmSummary;
+
+    var filmActor = obj.Actors;
+    document.getElementById('summary-actor').innerHTML = filmActor;
+
+    var filmGenre = obj.Genre;
+    document.getElementById('summary-genre').innerHTML = filmGenre;
+
+    var filmWriter = obj.Writer;
+    document.getElementById('summary-writer').innerHTML = filmWriter;
+
   },
 
   loaderFlip: function(loaderswitch){
