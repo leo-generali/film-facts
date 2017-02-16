@@ -85,6 +85,7 @@ Header
 }
 
 #searchbar-go{
+  -webkit-appearance: none;
   position:relative;
   left:-4px;
 
