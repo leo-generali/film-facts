@@ -5,25 +5,24 @@ model = {
     var movie = document.getElementById('searchbar').value;
     console.log(movie);
     var url = 'http://www.omdbapi.com/?t=' + movie //+ '&y=&plot=short&r=json';
+    view.hideFail();
 
     httpRequest.onreadystatechange = function(){
-      if(this.readyState === 4){
+      view.loaderFlip('inline');
+      if(this.readyState === 4 && this.status === 200){
         console.log('good');
         view.loaderFlip('none');
         var filmInfo = JSON.parse(this.responseText);
         view.updateFilmObj(filmInfo);
-      }else{
-        view.loaderFlip('inline');
-        if(this.status !== 200){
-          view.loaderFlip('none');
-          view.failedSearch();
-        }
+      }else if(this.status > 200){
+        
       }
     };
+
     httpRequest.open('GET', url, true);
     httpRequest.send(null); 
     return false;  
-  },
+  }
 
 
 };
@@ -67,11 +66,14 @@ view = {
 
     var filmWriter = obj.Writer;
     document.getElementById('summary-writer').innerHTML = filmWriter;
-
   },
 
   loaderFlip: function(loaderswitch){
-    document.getElementById('loading').style.display = loaderswitch;    
+    document.getElementById('loading').style.display = loaderswitch; 
+  },
+
+  hideFail: function(){
+    document.getElementById('title').innerHTML = '';    
   },
 
   failedSearch: function(obj){
