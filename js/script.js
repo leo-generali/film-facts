@@ -4,7 +4,7 @@ model = {
     var httpRequest = new XMLHttpRequest();
     var movie = document.getElementById('searchbar').value;
     console.log(movie);
-    var url = 'http://www.omdbapi.com/?t=' + movie //+ '&y=&plot=short&r=json';
+    var url = 'http://www.omdbapi.com/?t=' + movie;
     view.hideFail();
 
     httpRequest.onreadystatechange = function(){

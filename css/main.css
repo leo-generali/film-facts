@@ -33,14 +33,6 @@ h4{
   font-size: 3em;
 }
 
-.swag{
-  transition: all;
-
-
-
-}
-
-
 h5{
   font-size: 2em;
 }
@@ -154,13 +146,18 @@ Header
 }
 
 #bubble-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
 }
 
 .bubble{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100px;
   height: 100px;
@@ -169,8 +166,12 @@ Header
   border-radius: 100%;
   border: solid 5px rgba(0,0,0,1);
   background-color: rgba(0,0,0,0);
-  align-items: center;
+
+  -webkit-box-align:  center;
+  -ms-flex-align:     center;
+  align-items:        center;
 }
+    
     
 
 
