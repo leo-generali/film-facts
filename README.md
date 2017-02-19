@@ -10,8 +10,8 @@ I was getting tired of having to google for information on my favorite films. IM
 
 ## Visit
 
-You can check out the project [here](www.leogenerali.com/film-facts).
+You can check out the project [here](http://www.leogenerali.com/film-facts).
 
 ## Thanks
 
-Thanks to the [Open Movide Database](http://www.omdbapi.com/) for its generous API. None of this would be possible without it.
+Thanks to the [Open Movie Database](http://www.omdbapi.com/) for its generous API. None of this would be possible without it.
